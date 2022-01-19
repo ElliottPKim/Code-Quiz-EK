@@ -3,9 +3,31 @@ const nextButton = document.getElementById("next-btn")
 const questionContainerElement= document.getElementById("question-container")
 const questionElement = document.getElementById("question")
 const answerButtonsElement = document.getElementById("answer-buttons")
+// const infoBox = document.querySelector(".info-box");
+// const exitBtn = infoBox.querySelector(".buttons .quit");
+// const continueBtn = document.querySelector(".buttons .restart");
+const resultBox = document.querySelector("result-box");
+const nameInput = document.querySelector("#name");
+const submitBtn = document.querySelector("#submit-btn");
+const highscoreContainer = document.querySelector('.highscore-container');
+const highscoreTable = document.querySelector('.highscore-table');
+const timeLabel = document.querySelector('.timer');
+const timeSeconds = document.querySelector('.countdown');
 
 let shuffledQuestions, currentQuestionIndex
 
+let timeLeft = 60;
+let score = 0;
+let questionCount = 0;
+let questionNumber = 1;
+let counter; 
+let penalty = false; 
+
+let gameOver = false; 
+
+// startButton.onclick = () => {
+//     infoBox.classList.add("info-box");
+// }
 startButton.addEventListener("click", startGame)
 nextButton.addEventListener("click", () => {
     currentQuestionIndex++
@@ -18,6 +40,7 @@ function startGame() {
     currentQuestionIndex = 0
     questionContainerElement.classList.remove("hide")
     setNextQuestion()
+    startTimer(60);
 }
 
 function setNextQuestion() {

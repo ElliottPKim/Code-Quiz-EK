@@ -69,6 +69,61 @@ body.wrong {
     font-size: 24px;
 }
 
+.info-box {
+    position: absolute;
+    margin:auto;
+    top:39%;
+    left:20%;
+    transform: (-50%, -50%);
+}
+.info-box {
+    display:none;
+    width:900px;
+    background: rgb(240, 198, 223);
+    border-radius: 5px;
+}
+
+.info-box .info-title {
+    height:60px;
+    width:100%;
+    border-bottom: 1px solid black;
+    display:flex;
+    align-items: center;
+    padding: 0 35px;
+    font-size: 28px;
+}
+
+.info-box .info-buttons {
+    height:60px;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top:1px solid black;
+}
+
+.info-box .info-list .info {
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+    padding: 0 35px;
+}
+
+.info-box .info-buttons button {
+    margin: 0 5px;
+    height: 40px;
+    width: 100px;
+    border:1px solid black;
+    cursor:pointer;
+}
+
+.info-buttons .quit {
+
+}
+
+.info-buttons .restart {
+    
+}
 .controls {
     display:flex;
     justify-content: center;
@@ -78,18 +133,47 @@ body.wrong {
 .hide {
     display: none;
 }
-/* #start-btn {
+
+.result-box {
+    background:pink;
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(50%, -50%);
+    margin:auto;
+    top:50%;
+    left:50%;
+    transform: (-50%, -50%);
+    font-size: 28px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width:450px;
+    opacity:0;
+    pointer-events: none;
+    transform:translate(-50%, -50%) scale(0.9); 
 }
 
-.start-btn {
-    font-size: 18px;
-    font-weight: 500;
-    color:blue;
-    padding: 10px 25px;
-    background: #fff;
-    cursor: pointer;
-} */
+.result-box .buttons button {
+    margin:0 10px;
+    height:45px;
+    padding: 0 20px;
+    border:none;
+    outline:none;
+    border:1px solid skyblue;
+    cursor:pointer;
+}
+
+.highscore-container {
+    background:pink;
+    position: absolute;
+    margin:auto;
+    top:50%;
+    left:50%;
+    transform: (-50%, -50%);
+    font-size: 28px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width:450px;
+    opacity:0;
+    pointer-events: none;
+    transform:translate(-50%, -50%) scale(0.9); 
+}

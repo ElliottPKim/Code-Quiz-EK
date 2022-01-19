@@ -9,14 +9,32 @@
 </head>
 
 <body>
+    <!-- <figure class = "info-box">
+        <article class = "info-title">
+            <h1>RULES FOR THE QUIZ</h1>
+        </article>
+        <article class = "info-list">
+            <div class = "info">You have 1 Minute for 5 questions</div>
+            <div class = "info">Wrong answers will subtract 5 seconds</div>
+            <div class = "info">You can save your score at the end and retry!</div>
+        </article>
+        <article class = "info-buttons">
+            <button class = "quit">Exit</button>
+            <button class = "restart">Continue</button>
+        </article>
+    </figure> -->
+
     <figure class="container">
         <article id="question-container" class="hide">
-            <div id="question">Question</div>
-            <div id="answer-buttons" class="btn-grid">
-                <button class="btn">Answer 1</button>
-                <button class="btn">Answer 2</button>
-                <button class="btn">Answer 3</button>
-                <button class="btn">Answer 4</button>
+            <div class = "timer">
+                <div class = "countdown">60</div>
+                <div id="question">Question</div>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn">Answer 1</button>
+                    <button class="btn">Answer 2</button>
+                    <button class="btn">Answer 3</button>
+                    <button class="btn">Answer 4</button>
+                </div>
             </div>
         </article>
 
@@ -25,6 +43,33 @@
             <button id="next-btn" class="next-btn btn hide">Next</button>
         </article>
     </figure>
+
+    <figure class = "result-box">
+        <article class ="icon">
+        </article>
+        <div class = "complete-text">Done !</div>
+        <div class = "score-text">
+            <span>Sorry !! you only got <p>2</p> out of <p>5</p></span>
+        </div>
+        <div class = "buttons">
+            <button class = "restart">Restart</button>
+            <button class = "quit">Exit</button>
+        </div>
+        <div class = "submit-score">
+            <label for="name">Enter Initals</label>
+            <input type = "text" id = "name">
+            <br>
+            <button class = "submit-btn" id = "submit-btn">Submit</button>
+        </div>
+    </figure>
+
+    <figure class = "highscore-container">
+        <h1 class = "highscore-title">High Scores</h1>
+        <table class = "highscore-table">
+
+        </table>
+        <button class = "restart" id = "restrt">Restart</button>
+    </figure> 
     <script src="assets/js/quiz.js"></script>
 
 </body>
