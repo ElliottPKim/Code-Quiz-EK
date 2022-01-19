@@ -6,24 +6,28 @@ const answerButtonsElement = document.getElementById("answer-buttons")
 // const infoBox = document.querySelector(".info-box");
 // const exitBtn = infoBox.querySelector(".buttons .quit");
 // const continueBtn = document.querySelector(".buttons .restart");
+const timer = document.getElementById('timer')
+let countDown = document.getElementById('countdown')
 const resultBox = document.querySelector("result-box");
 const nameInput = document.querySelector("#name");
 const submitBtn = document.querySelector("#submit-btn");
 const highscoreContainer = document.querySelector('.highscore-container');
 const highscoreTable = document.querySelector('.highscore-table');
-const timeLabel = document.querySelector('.timer');
-const timeSeconds = document.querySelector('.countdown');
+
+
+
+
 
 let shuffledQuestions, currentQuestionIndex
 
-let timeLeft = 60;
-let score = 0;
-let questionCount = 0;
-let questionNumber = 1;
-let counter; 
-let penalty = false; 
+// let timeLeft = 60;
+// let score = 0;
+// let questionCount = 0;
+// let questionNumber = 1;
+// let counter; 
+// let penalty = false; 
 
-let gameOver = false; 
+// let gameOver = false; 
 
 // startButton.onclick = () => {
 //     infoBox.classList.add("info-box");
@@ -34,13 +38,35 @@ nextButton.addEventListener("click", () => {
     setNextQuestion()
 })
 
+
+
 function startGame() {
     startButton.classList.add("hide")
     shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0
     questionContainerElement.classList.remove("hide")
     setNextQuestion()
-    startTimer(60);
+    setInterval(
+        function timing () {
+        let timerEl=parseInt(countDown.innerHTML)
+        //console.log(parseInt(countDown.innerHTML))
+        // for(let i=0; i<timerEl; i++) {
+        //     console.log(timerEl-i)
+        //    //countDown.innerHTML=timerEl-i
+        //     if (i==1) {
+        //         
+        //     }
+        // }
+        console.log(timerEl--)
+
+        countDown.innerHTML=timerEl--
+    
+            if (timerEl==0) {
+             clearInterval(timing)   
+
+        }
+    }, 1000)
+    // startTimer(60);
 }
 
 function setNextQuestion() {
